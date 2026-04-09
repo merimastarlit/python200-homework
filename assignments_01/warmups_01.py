@@ -1,16 +1,16 @@
 # --- Pandas ---
 #  # Pandas Q1
 
-from prefect.logging import get_run_logger
+
 from scipy.stats import ttest_ind
-from prefect import task, flow
+
 import seaborn as sns
 from scipy.stats import pearsonr
 from scipy import stats
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import scipy.stats as stats
+
 
 data = {
     "name":   ["Alice", "Bob", "Carol", "David", "Eve"],
@@ -24,8 +24,7 @@ print(f"Num Rows: {len(df)}")
 
 # Pandas Q2
 
-
-print(df[df["grade"] > 80])
+print(df[(df['passed'] == True) & (df['grade'] > 80)])
 
 
 # Pandas Q3: Add a new column called "grade_curved" that adds 5 points to each student's grade. Print the updated DataFrame (all columns, all rows).
@@ -50,8 +49,8 @@ print(df[["name", "city"]])
 
 # Pandas Q7. Sort the DataFrame by "grade" in descending order and print the top 3 rows.
 
-df.sort_values("grade", ascending=False)
-print(df.head(3))
+sorted_df = df.sort_values("grade", ascending=False)
+print(sorted_df.head(3))
 
 # NumPy Review
 
