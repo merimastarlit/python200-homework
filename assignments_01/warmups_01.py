@@ -397,3 +397,9 @@ if __name__ == "__main__":
     result = data_pipeline(arr)
     for key, value in result.items():
         print(key, value)
+
+
+
+
+
+

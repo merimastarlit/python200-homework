@@ -6,4 +6,5 @@ seaborn
 scikit-learn
 statsmodels
 prefect
+scikit-learn
 
