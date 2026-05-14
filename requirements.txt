@@ -8,3 +8,10 @@ statsmodels
 prefect
 openai
 python-dotenv
+pypdf 
+python-dotenv 
+llama-index-core==0.14.10
+llama-index-embeddings-openai
+llama-index-vector-stores-postgres
+psycopg2-binary
+Pathlib
