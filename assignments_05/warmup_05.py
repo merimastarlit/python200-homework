@@ -5,7 +5,7 @@ import json
 from dotenv import load_dotenv
 from openai import OpenAI
 
-if load_dotenv(dotenv_path="../ao.env"):
+if load_dotenv(dotenv_path="./ao.env"):
     print("Successfully loaded api key")
 client = OpenAI()
 

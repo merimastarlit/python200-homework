@@ -5,10 +5,13 @@ import json
 
 # Task 1: System Prompt Creation
 
-if load_dotenv(dotenv_path="../ao.env"):
+if load_dotenv(dotenv_path="./ao.env"):
     print("Successfully loaded api key")
 
 client = OpenAI()
+
+# load_dotenv()
+# client = OpenAI()
 
 
 def get_completion(messages, model="gpt-4o-mini", temperature=0.7):
