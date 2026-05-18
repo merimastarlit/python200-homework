@@ -12,7 +12,7 @@ base_dir = Path(__file__).resolve().parent
 repo_dir = base_dir.parent
 
 
-if load_dotenv(dotenv_path=repo_dir / "ao.env"):
+if load_dotenv():
     print("API key loaded successfully.")
 else:
     print("Warning: could not load API key. Check your .env file.")
