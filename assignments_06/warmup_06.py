@@ -13,10 +13,19 @@ from pathlib import Path
 base_dir = Path(__file__).resolve().parent
 repo_dir = base_dir.parent
 
-if load_dotenv(dotenv_path="./ao.env"):
+# if platform.machine() != "arm64":
+#     raise RuntimeError(
+#         "This virtual environment has arm64 packages installed, but Python is "
+#         f"running as {platform.machine()}. Run with: "
+#         "arch -arm64 ./venv/bin/python -u assignments_06/project_06.py"
+#     )
+
+if load_dotenv():
     print("API key loaded successfully.")
 else:
     print("Warning: could not load API key. Check your .env file.")
+
+
 
 
 # Scenario A: A legal team wants an assistant that can answer questions about their internal policy library — hundreds of PDFs that are updated every quarter.
